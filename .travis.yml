@@ -1,10 +1,10 @@
 # Travis
 ---
 language: python
-addons:
-  apt:
-    packages:
-    - elinks
+# addons:
+#   apt:
+#     packages:
+#     - elinks
 install:
 - pip install pygments
 script:
@@ -12,13 +12,12 @@ script:
 - ls -a ~
 - ls ~/virtualenv/python2.7/bin
 - ~/virtualenv/python2.7/bin/pygmentize -h
-- ~/virtualenv/python2.7/bin/pygmentize -g .travis.yml # YAML file
-- ~/virtualenv/python2.7/bin/pygmentize -g -f terminal .travis.yml # YAML file
-- ~/virtualenv/python2.7/bin/pygmentize -g -f terminal256 .travis.yml # YAML file
-- ~/virtualenv/python2.7/bin/pygmentize -g  ~/virtualenv/python2.7/bin/activate_this.py # Python file
 - ~/virtualenv/python2.7/bin/pygmentize -P style=colorful -P bg=dark -P linenos=1 .travis.yml # YAML file
-- ~/virtualenv/python2.7/bin/pygmentize -f terminal .travis.yml # YAML file
-- ~/virtualenv/python2.7/bin/pygmentize -f terminal256 .travis.yml # YAML file
-- ~/virtualenv/python2.7/bin/pygmentize -f html .travis.yml | elinks -force-html -dump-color-mode 4 -dump
-- ~/virtualenv/python2.7/bin/pygmentize -l YAML -f html -P style=colorful -P bg=dark -P linenos=1 .travis.yml | elinks -force-html -dump-color-mode 4 -dump
+- ~/virtualenv/python2.7/bin/pygmentize -P style=colorful -P linenos=1 .travis.yml # YAML file
+- ~/virtualenv/python2.7/bin/pygmentize -P bg=dark -P linenos=1 .travis.yml # YAML file
+- ~/virtualenv/python2.7/bin/pygmentize -P linenos=1 .travis.yml # YAML file
+# - ~/virtualenv/python2.7/bin/pygmentize -f terminal .travis.yml # YAML file
+# - ~/virtualenv/python2.7/bin/pygmentize -f terminal256 .travis.yml # YAML file
+# - ~/virtualenv/python2.7/bin/pygmentize -f html .travis.yml | elinks -force-html -dump-color-mode 4 -dump
+# - ~/virtualenv/python2.7/bin/pygmentize -l YAML -f html -P style=colorful -P bg=dark -P linenos=1 .travis.yml | elinks -force-html -dump-color-mode 4 -dump
 - ~/virtualenv/python2.7/bin/pygmentize  ~/virtualenv/python2.7/bin/activate_this.py # Python file
