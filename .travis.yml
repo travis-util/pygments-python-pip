@@ -3,4 +3,6 @@ install:
 - pip install pygments
 script:
 - ls -a
-- la -a ~
+- ls -a ~
+- ls ~/virtualenv/python2.7/bin
+- ls -R ~
