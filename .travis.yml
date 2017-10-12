@@ -15,6 +15,7 @@ script:
 - ~/virtualenv/python2.7/bin/pygmentize -L style
 - ~/virtualenv/python2.7/bin/pygmentize -P bg=dark -P linenos=1 example.yaml # YAML file
 - ~/virtualenv/python2.7/bin/pygmentize -P linenos=1 example.yaml # YAML file
+# styles for Pygments 2.2.0
 - ~/virtualenv/python2.7/bin/pygmentize -P style=manni -P bg=dark -P linenos=1 example.yaml # YAML file
 - ~/virtualenv/python2.7/bin/pygmentize -P style=manni -P linenos=1 example.yaml # YAML file
 - ~/virtualenv/python2.7/bin/pygmentize -P style=igor -P bg=dark -P linenos=1 example.yaml # YAML file
