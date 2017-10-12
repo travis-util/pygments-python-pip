@@ -5,5 +5,5 @@ script:
 - ls -a
 - ls -a ~
 - ls ~/virtualenv/python2.7/bin
-- ~/virtualenv/python2.7/bin/pygmentize -g  ~/.travis.yml
+- ~/virtualenv/python2.7/bin/pygmentize -g  .travis.yml
 - ~/virtualenv/python2.7/bin/pygmentize -g  ~/virtualenv/python2.7/bin/activate_this.py
