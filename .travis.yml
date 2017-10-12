@@ -3,4 +3,4 @@ install:
 - pip install pygments
 script:
 - ls -a
-- la -a 
+- la -a ~
