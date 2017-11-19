@@ -8,6 +8,7 @@ language: python
 before_install:
 - ls --color -a
 - ls --color -a ~
+- ls --color ~/virtualenv
 - ls --color ~/virtualenv/python2.7
 - ls --color ~/virtualenv/python2.7/bin
 install:
