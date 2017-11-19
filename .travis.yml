@@ -23,7 +23,7 @@ before_install:
 - ls --color ~/virtualenv/python2.7
 - ls --color ~/virtualenv/python2.7/bin
 install:
-- pip install --user pygments # --user is required for language: <not> python
+- pip3 install --user pygments # --user is required for language: <not> python
 before_script:
 - which pygmentize
 - pygmentize -h
