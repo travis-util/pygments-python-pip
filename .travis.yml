@@ -1,16 +1,17 @@
 # Travis
 ---
-language: python
+# language: python
 # addons:
 #   apt:
 #     packages:
 #     - elinks
+before_install:
+- ls --color -a
+- ls --color -a ~
+- ls --color ~/virtualenv/python2.7/bin
 install:
 - pip install pygments
 script:
-- ls -a
-- ls -a ~
-- ls ~/virtualenv/python2.7/bin
 - ~/virtualenv/python2.7/bin/pygmentize -h
 - ~/virtualenv/python2.7/bin/pygmentize -L style
 - ~/virtualenv/python2.7/bin/pygmentize -P bg=dark -P linenos=1 example.yaml # YAML file
