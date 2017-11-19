@@ -25,6 +25,8 @@ before_install:
 install:
 - pip install pygments # this requires language: python
 before_script:
+- which pygmentize
+- pygmentize -h
 - ~/virtualenv/python2.7/bin/pygmentize -h
 - ~/virtualenv/python2.7/bin/pygmentize -L style
 script:
