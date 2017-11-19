@@ -12,10 +12,10 @@
 # - "3.6-dev" # 3.6 development branch
 # - "3.7-dev" # 3.7 development branch
 # - "nightly"
-# addons:
-#   apt:
-#     packages:
-#     - elinks
+addons:
+  apt:
+    packages:
+    - elinks
 before_install:
 - ls --color -a
 - ls --color -a ~
@@ -33,7 +33,9 @@ before_script:
 - pygmentize -L style
 script:
 - pygmentize -P bg=dark -P linenos=1 example.yaml # YAML file
+- pygmentize -P bg=dark -P linenos=1 example.yaml -f html | elinks -force-html -dump-color-mode 4 -dump
 - pygmentize -P linenos=1 example.yaml # YAML file
+- pygmentize -P linenos=1 example.yaml -f html | elinks -force-html -dump-color-mode 4 -dump
 # styles for Pygments 2.2.0
 - pygmentize -P style=manni -P bg=dark -P linenos=1 example.yaml # YAML file
 - pygmentize -P style=manni -P linenos=1 example.yaml # YAML file
