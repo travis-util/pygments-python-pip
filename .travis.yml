@@ -26,7 +26,7 @@ before_install:
 - which pip2
 - which pip3
 install:
-- pip install --user pygments # --user is required for language: <not> python to use python 2 (python 3 seems unsupported)
+- pip install pygments # --user is required for language: <not> python to use python 2 (python 3 seems unsupported)
 before_script:
 - which pygmentize
 - pygmentize -h
