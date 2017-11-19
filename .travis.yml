@@ -12,10 +12,10 @@
 # - "3.6-dev" # 3.6 development branch
 # - "3.7-dev" # 3.7 development branch
 # - "nightly"
-addons:
-  apt:
-    packages:
-    - elinks
+# addons:
+#   apt:
+#     packages:
+#     - elinks # does not display colors from Pygments
 before_install:
 - ls --color -a
 - ls --color -a ~
@@ -33,9 +33,9 @@ before_script:
 - pygmentize -L style
 script:
 - pygmentize -P bg=dark -P linenos=1 example.yaml # YAML file
-- pygmentize -P bg=dark -P linenos=1 -f html example.yaml | elinks -force-html -dump-color-mode 4 -dump
+# - pygmentize -P bg=dark -P linenos=1 -f html example.yaml | elinks -force-html -dump-color-mode 4 -dump
 - pygmentize -P linenos=1 example.yaml # YAML file
-- pygmentize -P linenos=1 -f html example.yaml | elinks -force-html -dump-color-mode 4 -dump
+# - pygmentize -P linenos=1 -f html example.yaml | elinks -force-html -dump-color-mode 4 -dump
 # styles for Pygments 2.2.0
 - pygmentize -P style=manni -P bg=dark -P linenos=1 example.yaml # YAML file
 - pygmentize -P style=manni -P linenos=1 example.yaml # YAML file
@@ -96,10 +96,11 @@ script:
 - pygmentize -P style=fruity -P bg=dark -P linenos=1 example.yaml # YAML file
 - pygmentize -P style=fruity -P linenos=1 example.yaml # YAML file
 
-- pygmentize -f terminal example.yaml # YAML file
-- pygmentize -f terminal256 example.yaml # YAML file
-- pygmentize -f html example.yaml | elinks -force-html -dump-color-mode 4 -dump
-- pygmentize -l YAML -f html -P style=colorful -P bg=dark -P linenos=1 example.yaml | elinks -force-html -dump-color-mode 4 -dump
+# - pygmentize -f terminal example.yaml # YAML file
+# - pygmentize -f terminal256 example.yaml # YAML file
+# - pygmentize -f html example.yaml | elinks -force-html -dump-color-mode 4 -dump
+# - pygmentize -l YAML -f html -P style=colorful -P bg=dark -P linenos=1 example.yaml | elinks -force-html -dump-color-mode 4 -dump
 
 - pygmentize ~/virtualenv/python2.7/bin/activate_this.py # Python file
-- pygmentize -f html ~/virtualenv/python2.7/bin/activate_this.py | elinks -force-html -dump-color-mode 4 -dump
+# - pygmentize -f html ~/virtualenv/python2.7/bin/activate_this.py | elinks -force-html -dump-color-mode 4 -dump
+- pygmentize -f html ~/virtualenv/python2.7/bin/activate_this.py
