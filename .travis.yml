@@ -95,8 +95,11 @@ script:
 - pygmentize -P style=algol -P linenos=1 example.yaml # YAML file
 - pygmentize -P style=fruity -P bg=dark -P linenos=1 example.yaml # YAML file
 - pygmentize -P style=fruity -P linenos=1 example.yaml # YAML file
-# - pygmentize -f terminal example.yaml # YAML file
-# - pygmentize -f terminal256 example.yaml # YAML file
-# - pygmentize -f html example.yaml | elinks -force-html -dump-color-mode 4 -dump
-# - pygmentize -l YAML -f html -P style=colorful -P bg=dark -P linenos=1 example.yaml | elinks -force-html -dump-color-mode 4 -dump
-- pygmentize  ~/virtualenv/python2.7/bin/activate_this.py # Python file
+
+- pygmentize -f terminal example.yaml # YAML file
+- pygmentize -f terminal256 example.yaml # YAML file
+- pygmentize -f html example.yaml | elinks -force-html -dump-color-mode 4 -dump
+- pygmentize -l YAML -f html -P style=colorful -P bg=dark -P linenos=1 example.yaml | elinks -force-html -dump-color-mode 4 -dump
+
+- pygmentize ~/virtualenv/python2.7/bin/activate_this.py # Python file
+- pygmentize -f html ~/virtualenv/python2.7/bin/activate_this.py | elinks -force-html -dump-color-mode 4 -dump
