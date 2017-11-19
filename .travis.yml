@@ -22,6 +22,9 @@ before_install:
 - ls --color ~/virtualenv
 - ls --color ~/virtualenv/python2.7
 - ls --color ~/virtualenv/python2.7/bin
+- which pip
+- which pip2
+- which pip3
 install:
 - pip install --user pygments # --user is required for language: <not> python to use python 2 (python 3 seems unsupported)
 before_script:
