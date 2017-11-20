@@ -9,13 +9,13 @@ python:
 - "3.4"
 - "3.5"
 - "3.6"
-- "3.6-dev" # 3.6 development branch
-- "3.7-dev" # 3.7 development branch
+- "3.6-dev"
+- 3.7-dev
 - "nightly"
 addons:
   apt:
     packages:
-    - elinks # does not display colors from Pygments
+    - elinks # Needs pygmentize -f html -O full
 before_install:
 - ls --color -a
 - ls --color -a ~
